@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import 'animate.css/animate.min.css';
 import '../index.css';
 import StarRating from './StarRating';
+import BookSearch from './BookSearch';
+
 
 const BookList = () => {
   const [books, setBooks] = useState([]);
@@ -38,6 +40,7 @@ const BookList = () => {
 
   return (
     <div className="p-6">
+      <BookSearch />
       <h1 className="text-4xl font-bold mb-8">Book List:</h1>
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {books.map(book => {
